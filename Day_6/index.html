@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid;
+
+        }
+        table{
+            width: 300px;
+            display: none;
+        }
+        #colorBox{
+            background-color:crimson;
+            display: flex;
+            width: 130px;
+            height: 100px;
+            float: left;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+            border-radius: 10px;
+
+        }
+        #wrapper{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h3>Events - Task 1 - Show Date</h3>
+    <button type="button" onclick="showDate()">Show Date!</button>
+    <div><h2> Hello</h2></div>
+    
+    <hr>
+    
+    <h3>Events - Task 2 - Enter Equation to solve</h3>
+    <button type="button" onclick="calVal()">Calculate Value</button>
+    <div id="calVal"><h2></h2></div>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    age
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    
+    <hr>
+
+    <div id="wrapper">
+        <div id="colorBox" onclick="randCopy(this)">Click Me</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
