@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <style>
+        #text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table,th,td{
+            border: 1px solid;
+            width: 300px;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="text">
+        <label for="userName">Name: </label>
+        <input type="text" id="user" name="userName">
+        <span id="userSpan"></span>
+    </div>
+    <div id="text">
+        <label for="userAge">Age: </label>
+        <input type="text" id="age" name="userAge">
+        <span id="ageSpan"></span>
+    </div>
+    <div id="text">
+        <label for="userEmail">Email: </label>
+        <input type="text" id="email" name="userEmail">
+        <span id="emailSpan"></span>
+    </div>
+    <div id="text">
+        <button type="button" onclick="checkName()">Add</button>
+        <button type="button" onclick="resetAll()">Reset</button>
+    </div>
+    <table class="center">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Email
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="infoVal.js"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="userName"></h2>
+    <div>Your information is: </div>
+
+    <script>
+        var data = window.location.search.slice(1,window.location.search.length);
+        data = data.split("&");
+        document.getElementById("userName").innerText = 
+            "Welcome "+data[0].slice(data[0].indexOf("=")+1,data[0].length);
+        for(var i = 1; i< data.length ;i++){
+            var div = document.getElementsByTagName("div")[0].cloneNode(true);
+            div.innerHTML = "<div>"+data[i]+"</div>";
+            document.getElementsByTagName("body")[0].append(div);
+        }
+        
+        console.log(data);
+    </script>
+</body>
+</html>
