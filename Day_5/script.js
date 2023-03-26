@@ -119,22 +119,23 @@ var sum = 0;
 var mul = 1;
 var div = 1;
 var arr = new Array(3);
+arr = [null, null, null];
 
 function getElement(){
     do{
         var value = prompt("Enter Number: ");
     }while( isNaN(value) || value == null);
-    arguments[0] = Number(value);
+    arr[arguments[1]] = Number(value);
 }
+console.log(arr.length);
+arr.forEach(getElement);
 
-//arr.forEach(getElement);
-
-for(var j = 0; j < arr.length; j++){
-    do{
-        var value = prompt("Enter Number: ");
-    }while( isNaN(value) || value == null);
-    arr[j] = Number(value);
-}
+// for(var j = 0; j < arr.length; j++){
+//     do{
+//         var value = prompt("Enter Number: ");
+//     }while( isNaN(value) || value == null);
+//     arr[j] = Number(value);
+// }
 
 for(var i = 0; i < arr.length; i++){
     sum += arr[i];
