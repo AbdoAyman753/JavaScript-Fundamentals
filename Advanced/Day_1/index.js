@@ -44,36 +44,44 @@ var department = {
             if (typeof keyVal === 'function')
                 continue;
 
-            defineMethods(this, key);
+            //defineMethods(this, key);
+            defineSetGet(this,key);
+        }
+        //id --> getId
+        function defineMethods(object, key) {
+            var myKey = key;
+            var keyMethodName = "get" + myKey.charAt(0).toUpperCase() + myKey.slice(1);
+            Object.defineProperty(object, keyMethodName, {
+                value: function () {
+                    return this[myKey];
+                }
+            })
+            keyMethodName = "set" + myKey.charAt(0).toUpperCase() + myKey.slice(1);
+            Object.defineProperty(object, keyMethodName, {
+                value: function (inputVal) {
+                    this[myKey] = inputVal;
+                }
+            })
+            
+        }
 
 
-            //id --> getId
-            function defineMethods(object, key) {
-                var myKey = key;
-                var keyMethodName = "get" + myKey.charAt(0).toUpperCase() + myKey.slice(1);
-                Object.defineProperty(object, keyMethodName, {
-                    value: function () {
-                        // return Object.getOwnPropertyDescriptor(this,myKey).value;
-                        return this[myKey];
-                    }
-                })
-                keyMethodName = "set" + myKey.charAt(0).toUpperCase() + myKey.slice(1);
-                Object.defineProperty(object, keyMethodName, {
-                    value: function (inputVal) {
-                        this[myKey] = inputVal;
-                    }
-                })
-                // object.storedVal = Object.getOwnPropertyDescriptor(object, myKey).value;
-            }
-
-
-
-            // keyMethodName = "set"+key.charAt(0).toUpperCase()+key.slice(1);
-            // Object.defineProperty(this, keyMethodName, {
-            //     value : function(inputValue){
-            //         ;
-            //     }                
-            // })
+        function defineSetGet(object, key) {
+            var myKey = key;
+            var val = object[key];
+            
+            Object.defineProperty(object, myKey, {
+                get: function () {
+                    return val;
+                }
+            })
+            keyMethodName = "set" + myKey.charAt(0).toUpperCase() + myKey.slice(1);
+            Object.defineProperty(object, myKey, {
+                set: function (inputVal) {
+                    val = inputVal;
+                }
+            })
+            
         }
     }
 };
