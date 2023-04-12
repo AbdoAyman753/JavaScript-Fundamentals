@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library DataBase</title>
+</head>
+<body>
+    <div id="landing">
+        <form>
+            <div>
+                <label for="Books">Books:</label>
+                <input type="number" id="books" name="Books" placeholder="Enter No. of Books" min="0">
+                <span id="booksFooter"></span>
+            </div>
+            
+            <input type="submit" value="Next" onclick="enterBooks()">
+        </form>
+    </div>
+    
+    <div id="Info">
+        <form>
+            <div>
+                <label for="Title">Title:</label>
+                <input type="Text" id="title" name="Title" placeholder="Book Title">
+                <span id="titleFooter"></span>
+            </div>
+            <div>
+                <label for="Price">Price:</label>
+                <input type="number" id="price" name="Price" placeholder="Book Price" min="0">
+                <span id="priceFooter"></span>
+            </div>
+            <div>
+                <label for="Author">Author:</label>
+                <input type="Text" id="author" name="Author" placeholder="Author Name">
+                <span id="authorFooter"></span>
+            </div>
+            <div>
+                <label for="Email">Email:</label>
+                <input type="Text" id="email" name="Email" placeholder="Author Email">
+                <span id="emailFooter"></span>
+            </div>
+            
+            <input type="submit" onclick="getBookInfo()">
+        </form>
+    </div>
+    
+    <div id="Table">
+        <table>
+            <thead>
+                <th>Book Title</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Author Email</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

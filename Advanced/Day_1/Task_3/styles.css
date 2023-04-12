@@ -1,0 +1,42 @@
+#landing {
+  display: block;
+  text-align: center;
+}
+#landing > form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+#Info {
+  display: none;
+}
+#Info > * {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+#Table {
+  display: none;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+#Table > table {
+  display: table;
+  min-width: 50%;
+}
+#Table > table, #Table th, #Table td {
+  border: 1px solid;
+}
+
+span {
+  color: red;
+}/*# sourceMappingURL=styles.css.map */

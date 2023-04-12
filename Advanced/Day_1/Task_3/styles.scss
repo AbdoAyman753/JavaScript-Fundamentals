@@ -1,0 +1,42 @@
+#landing{
+    display: block;
+    text-align: center;
+    & > form{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
+}
+#Info{
+    display: none;
+    & > *{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+#Table{
+    display: none;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    & > table{
+        display: table;
+        min-width: 50%;
+    }
+
+    & > table, th, td{
+        border: 1px solid
+    }
+}
+
+span{
+    color: red;
+}
