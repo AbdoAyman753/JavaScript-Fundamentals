@@ -5,14 +5,16 @@ async function getUsers() {
     return users;
 }
 
-function showUsers() {
+function showUsers(){
     let data;
     getUsers().then((values) => {
         data = values;
         console.log(data);
         for (let i = 0; i < data.length; i++) {
             let btn = document.createElement("button");
+            // console.log(btn.innerHTML);
             btn.innerHTML = `<input type="button" value="${data[i].name}" class="btn" onclick="getComments(${i+1})">`;
+            // console.log(btn.innerHTML);
             document.getElementById("users").appendChild(btn);
         }
     });
