@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+</head>
+<body>
+    <label for="users"><b>User: </b></label>
+    <select name="users" id="list" onchange="selectUser(this.value)">
+        <option value="" selected disabled hidden >Pick Student...</option>
+    </select>
+    <br>
+    <img src="" id="pic"alt="picture">
+    <br>
+    <label for="id"><b>ID:</b></label>
+    <span name="id" id="id"></span>
+    <br>
+    <label for="email"><b>Email:</b></label>
+    <span name="email" id="email"></span>
+    <br>
+    <script src="UsersList.js"></script>
+</body>
+</html>

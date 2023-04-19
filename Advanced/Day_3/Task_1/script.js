@@ -23,8 +23,10 @@ function Box(w, h, l, material, cntnt) {
 
     if (!cntnt)
         content = [];
-    else
-        content = cntnt;
+    else{
+        content = [...cntnt];
+    }
+        
 
     this.no_of_books = content.length;
 
@@ -51,7 +53,6 @@ function Box(w, h, l, material, cntnt) {
     }
 }
 
-
 function Book(title, chapters, author) {
     if (!title)
         this.title = "";
@@ -73,10 +74,15 @@ var bk1_1 = new Book("harry potter", 20, "Dennings");
 var bk1_2 = new Book("Song of ice and fire", 16, "maxuill");
 var bk1_3 = new Book("العظماء ال 100",1,"النابلسى");
 
-var bx1 = new Box(2,4,3,"plastic",[bk1_1,bk1_2,bk1_3]);
+var arr = [bk1_1,bk1_2,bk1_3];
+var bx1 = new Box(2,4,3,"plastic",arr);
 
 
 var bk2_1 = new Book("How To for dummies", 50, "Dummy");
 var bk2_2 = new Book("O'Raily", 20, "Oracle");
 
-var bx2 = new Box(5,7,2,"metal",[bk2_1,bk2_2]);
+var bx2 = new Box(5,7,2,"metal",arr);
+bx1.deleteBook("How To for dummies");
+console.log(bx1.no_of_books);
+console.log(bx2.no_of_books);
+//[bk2_1,bk2_2]

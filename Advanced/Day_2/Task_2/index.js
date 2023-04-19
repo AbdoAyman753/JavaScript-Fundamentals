@@ -3,8 +3,8 @@ function Shape(){
     if(this.constructor == Shape)
         throw("Can't create instance of abstract class.");
 
-    // Shape.prototype.area = function(){};
-    // Shape.prototype.perimeter = function(){};
+    Shape.prototype.area = function(){};
+    Shape.prototype.perimeter = function(){};
 }
 
 
@@ -13,9 +13,12 @@ function Shape(){
 
 // Rectangle class --> inherit from shape
 function Rectangle(w, h) {
-    if(Rectangle.getInstancesCount() >= 1){
-        throw("Can't create more than 1 Rectangle");
+    if(this.constructor == Rectangle){
+        if(Rectangle.getInstancesCount() >= 1){
+            throw("Can't create more than 1 Rectangle");
+        }
     }
+    
     if(this.constructor == Rectangle){
         Rectangle.newInstance();
     }
@@ -69,6 +72,7 @@ function Square(l){
     if(Square.getInstancesCount() >= 1){
         throw("Can't create more than 1 Square");
     }
+    // if(this.constructor == Square)
     Square.newInstance();
     Rectangle.call(this,l,l);
     if (!l)
@@ -104,7 +108,7 @@ Square.prototype.constructor = Square;
 
 // var sh = new Shape();
 
-// var rect = new Rectangle(2, 3);
+var rect = new Rectangle(2, 3);
 // var rect2 = new Rectangle(15, 6);
 
 var sq = new Square(4);

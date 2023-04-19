@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+
+<body>
+    <form >
+        <label for="name"><b>Enter Your Name: </b></label>
+        <input type="text" name="name" id="name" placeholder="Name">
+        <br>
+        <br>
+        <label for="age"><b>Enter Your Age: </b></label>
+        <input type="number" name="age" id="age" min="0" max="70">
+        <br>
+        <br>
+        <label for="gender"><b>Select Your Gender: </b></label>
+        <br>
+        <br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male"><img src="https://www.svgrepo.com/show/382109/male-avatar-boy-face-man-user-7.svg" alt="male"
+                style="max-width: 10%;">
+        </label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female"><img src="https://www.svgrepo.com/show/382097/female-avatar-girl-face-woman-user-9.svg"
+                alt="female" style="max-width: 10%;">
+        </label>
+
+        <br>
+        <br>
+
+        <label for="color"><b>Select Your Favourit Color</b></label>
+        <input type="color" name="color" id="color">
+        <br>
+        <br>
+        <input type="button" value="Submit" onclick="saveInfo()">
+    </form>
+    <script src="cookies.js"></script>
+    <!-- <script src="script.js" type="module"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body style="text-align: center;">
+    <img src=""  id="gender" alt="gender"
+        style="max-width: 25%;">
+    <span>Welcome </span><span id="name"></span><span> You have visited this site </span><span id="log"></span><span> Times.</span>
+    
+    <script src="cookies.js"></script>
+    <!-- <script src="script.js" type="module"></script> -->
+    <script>
+        window.onload = function(){
+            setCookie("log", Number(getCookie("log"))+1, new Date("4/19/2023"));
+            var gender = getCookie("gender");
+            if(gender === "male"){
+                document.getElementById("gender").setAttribute("src","https://www.svgrepo.com/show/382109/male-avatar-boy-face-man-user-7.svg");
+            }
+            else{
+                document.getElementById("gender").setAttribute("src","https://www.svgrepo.com/show/382097/female-avatar-girl-face-woman-user-9.svg")
+            }
+            document.getElementById("name").innerText = getCookie("name");
+            document.getElementById("name").style.color = getCookie("favColor");
+            document.getElementById("log").innerText = getCookie("log");
+            document.getElementById("log").style.color = getCookie("favColor");
+        }
+    </script>
+</body>
+
+</html>
